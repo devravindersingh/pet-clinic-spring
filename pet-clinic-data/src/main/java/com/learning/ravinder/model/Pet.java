@@ -1,4 +1,4 @@
-package model;
+package com.learning.ravinder.model;
 
 import java.time.LocalDate;
 
