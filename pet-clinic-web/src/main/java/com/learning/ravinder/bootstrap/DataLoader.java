@@ -1,11 +1,9 @@
-package petclinicspring.bootstrap;
+package com.learning.ravinder.bootstrap;
 
 import com.learning.ravinder.model.Owner;
 import com.learning.ravinder.model.Vet;
 import com.learning.ravinder.service.OwnerService;
 import com.learning.ravinder.service.VetService;
-import com.learning.ravinder.service.map.OwnerServiceMap;
-import com.learning.ravinder.service.map.VetMapService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetMapService();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

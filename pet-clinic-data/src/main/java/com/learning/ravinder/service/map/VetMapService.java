@@ -2,9 +2,10 @@ package com.learning.ravinder.service.map;
 
 import com.learning.ravinder.model.Vet;
 import com.learning.ravinder.service.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {

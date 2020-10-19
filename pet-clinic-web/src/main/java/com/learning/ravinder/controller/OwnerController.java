@@ -1,4 +1,4 @@
-package petclinicspring.controller;
+package com.learning.ravinder.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

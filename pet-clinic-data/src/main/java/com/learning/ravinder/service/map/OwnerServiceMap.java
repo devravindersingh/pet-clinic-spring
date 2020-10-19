@@ -2,9 +2,11 @@ package com.learning.ravinder.service.map;
 
 import com.learning.ravinder.model.Owner;
 import com.learning.ravinder.service.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

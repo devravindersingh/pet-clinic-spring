@@ -1,4 +1,4 @@
-package petclinicspring;
+package com.learning.ravinder;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
