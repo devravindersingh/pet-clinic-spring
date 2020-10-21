@@ -1,12 +1,12 @@
 package com.learning.ravinder.service.map;
 
 import com.learning.ravinder.model.Specialty;
-import com.learning.ravinder.service.SpecialtiesService;
+import com.learning.ravinder.service.SpecialtyService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 @Service
-public class SpecialityMapService extends AbstractMapService<Specialty, Long> implements SpecialtiesService {
+public class SpecialityMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {
         return super.findAll();
