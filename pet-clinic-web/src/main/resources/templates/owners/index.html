@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleag.org">
+<html lang="en" xmlns:th="http://www.thymeleag.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}">
 <head>
     <meta charset="UTF-8">
     <title>List of Owners</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>id</th>
-            <th>Fname</th>
-            <th>lname</th>
-        </tr>
+    <table id="owners" class="table table-striped">
+        <thead>
+            <th style="width: 150px;">id</th>
+            <th style="width: 200px;">Fname</th>
+            <th style="width: 150px;">lname</th>
+        </thead>
 
         <tr th:each = "owner : ${ownerList}">
             <td th:text="${owner.id}"></td>
