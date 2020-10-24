@@ -1,8 +1,8 @@
 package com.learning.ravinder.service.springdatajpa;
 
-import com.learning.ravinder.model.PetType;
-import com.learning.ravinder.repository.PetTypeRepository;
-import com.learning.ravinder.service.PetTypeService;
+import com.learning.ravinder.model.Pet;
+import com.learning.ravinder.repository.PetRepository;
+import com.learning.ravinder.service.PetService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -11,38 +11,38 @@ import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
-public class PetSDJpaService implements PetTypeService {
+public class PetSDJpaService implements PetService {
 
-    private final PetTypeRepository petTypeRepository;
+    private final PetRepository petRepository;
 
-    public PetSDJpaService(PetTypeRepository petTypeRepository) {
-        this.petTypeRepository = petTypeRepository;
+    public PetSDJpaService(PetRepository petRepository) {
+        this.petRepository = petRepository;
     }
 
     @Override
-    public Set<PetType> findAll() {
-        Set<PetType> petTypes = new HashSet<>();
-        petTypeRepository.findAll().forEach(petTypes::add);
-        return petTypes;
+    public Set<Pet> findAll() {
+        Set<Pet> pets = new HashSet<>();
+        petRepository.findAll().forEach(pets::add);
+        return pets;
     }
 
     @Override
-    public PetType findById(Long id) {
-        return petTypeRepository.findById(id).orElse(null);
+    public Pet findById(Long id) {
+        return petRepository.findById(id).orElse(null);
     }
 
     @Override
-    public PetType save(PetType object) {
-        return petTypeRepository.save(object);
+    public Pet save(Pet object) {
+        return petRepository.save(object);
     }
 
     @Override
-    public void delete(PetType object) {
-        petTypeRepository.delete(object);
+    public void delete(Pet object) {
+        petRepository.delete(object);
     }
 
     @Override
     public void deleteById(Long id) {
-        petTypeRepository.deleteById(id);
+        petRepository.deleteById(id);
     }
 }
