@@ -5,11 +5,13 @@ import com.learning.ravinder.model.Pet;
 import com.learning.ravinder.service.OwnerService;
 import com.learning.ravinder.service.PetService;
 import com.learning.ravinder.service.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;

@@ -2,10 +2,13 @@ package com.learning.ravinder.service.map;
 
 import com.learning.ravinder.model.Visit;
 import com.learning.ravinder.service.VisitService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
+
 @Service
+@Profile({"default", "map"})
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
     @Override

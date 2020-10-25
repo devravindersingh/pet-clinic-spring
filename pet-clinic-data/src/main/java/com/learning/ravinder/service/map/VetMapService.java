@@ -4,10 +4,13 @@ import com.learning.ravinder.model.Specialty;
 import com.learning.ravinder.model.Vet;
 import com.learning.ravinder.service.SpecialtyService;
 import com.learning.ravinder.service.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
+
 @Service
+@Profile({"default", "map"})
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
     private final SpecialtyService specialtyService;
 
