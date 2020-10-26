@@ -57,6 +57,13 @@
             <version>${webjars-bootstrap.version}</version>
         </dependency>
         <!-- Web Jars ends -->
+        <!-- Lombok -->
+        <!--<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>-->
+        <!-- Lombok ends -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
